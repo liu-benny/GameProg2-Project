@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class movementBB : MonoBehaviour
 {   
+    //Audio source for BB's movement
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip rollClip;
+
+    [SerializeField] Transform groundCheck;
+    [SerializeField] LayerMask ground;
+
     public Rigidbody rb;
     public Transform cam;
-    public float speed = 500f;
-    public float jump = 20f;
+    public float speed = 40f;
+    public float jump = 60f;
 
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
@@ -30,15 +37,30 @@ public class movementBB : MonoBehaviour
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            rb.AddForce(moveDir.normalized * speed *Time.deltaTime);
+            rb.AddForce(moveDir.normalized, ForceMode.Impulse);
         }
        
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && IsGrounded())
         {
-            rb.AddForce(new Vector3(0,jump,0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0,jump * 4,0), ForceMode.Impulse);
         }
-
+        
     }
 
+    // Method return true if the position of the GroundCheck overlaps with the ground
+    bool IsGrounded()
+    {
+        return Physics.CheckSphere(groundCheck.position, .1f, ground);
+    }
+
+    // Play the roll clip sound when collision with the furniture 
+    void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.tag == "Furniture"){
+            if (!audioSource.isPlaying){
+                audioSource.PlayOneShot(rollClip);
+            }
+        }
+    }
 
 }
