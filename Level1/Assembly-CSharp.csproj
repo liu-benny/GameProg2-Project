@@ -84,6 +84,7 @@
      <Compile Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Scenes\Anywhere Door\TagChanger.cs" />
      <None Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Scenes\FadeOutNearbyObjects\FadeOut.shader" />
      <None Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Scenes\Anywhere Door\ScreenCutoutShader.shader" />
+     <None Include="Assets\Single_detailed_truck\readme.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.38f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
