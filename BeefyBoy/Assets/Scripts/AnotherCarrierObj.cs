@@ -25,15 +25,6 @@ public class AnotherCarrierObj : MonoBehaviour
         Debug.Log("object is on the belt");
         gameObject.transform.Translate(Vector3.right *speed * Time.deltaTime, Space.World);
     }
-
-    
-    
-    
-    
-    
-    
-    
-    
     
     // Start is called before the first frame update
     void Start()
