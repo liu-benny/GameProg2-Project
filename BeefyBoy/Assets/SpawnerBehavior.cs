@@ -13,7 +13,7 @@ public class SpawnerBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        next_spawn_time = Time.time+5.0f;
+        next_spawn_time = Time.time+4.0f;
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class SpawnerBehavior : MonoBehaviour
         Instantiate(myObjects[randomIndex], transform.position, Quaternion.identity);
  
          //increment next_spawn_time
-         next_spawn_time += 5.0f;
+         next_spawn_time += 4.0f;
         }
     }
 }
