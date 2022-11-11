@@ -51,7 +51,9 @@ public class movementBB : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             rb.AddForce(moveDir.normalized * speed *Time.deltaTime);
         }
-        if (Input.GetKeyDown("space") && IsGrounded())
+        
+        if (Input.GetKeyDown("space"))
+        // if (Input.GetKeyDown("space") && IsGrounded()) add this back later
         {
             rb.AddForce(new Vector3(0,jump,0), ForceMode.Impulse);
         }
