@@ -7,6 +7,7 @@ public class CarrierObj : MonoBehaviour
     
     // speed of moving objects
     public float speed = 4f;
+    public string direction = ""; 
 
 
     // if collision happened, call this method, and update for each frame
@@ -21,7 +22,14 @@ public class CarrierObj : MonoBehaviour
 
     // move the object that on the belt 
     public void MoveObj(GameObject gameObject){
-        gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
+        if(direction == "forward"){
+            gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
+        }else if(direction == "right"){
+            gameObject.transform.Translate(Vector3.right *speed * Time.deltaTime, Space.World);
+        }else{
+            gameObject.transform.Translate(Vector3.left *speed * Time.deltaTime, Space.World);
+        }
+        
     }
 
     
