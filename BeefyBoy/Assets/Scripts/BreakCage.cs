@@ -9,6 +9,11 @@ public class BreakCage : MonoBehaviour
     GameObject beefyBoy;
 
     [SerializeField] GameObject explosion;
+
+    [SerializeField]
+    AudioSource audioSource;
+    [SerializeField]
+    AudioClip cageBreak;
     
     void Start()
     {
@@ -37,6 +42,7 @@ public class BreakCage : MonoBehaviour
             ContactPoint contact = other.contacts[0];
             Vector3 pos = contact.point;
             Instantiate(explosion, pos, Quaternion. Euler(-90, 0, 0));
+            audioSource.PlayOneShot(cageBreak);
 
             this.gameObject.SetActive(false);
         }
