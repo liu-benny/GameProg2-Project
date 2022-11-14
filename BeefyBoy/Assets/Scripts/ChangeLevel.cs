@@ -8,16 +8,12 @@ public class ChangeLevel : MonoBehaviour
     UnityEngine.SceneManagement.Scene nextScene;
     GameObject beefyBoy;
     
-    // Start is called before the first frame update
     void Start()
     {
         beefyBoy = GameObject.Find("beefyBoy");
-        
-        
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -25,7 +21,7 @@ public class ChangeLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject == beefyBoy) {
-            //changes next scene to the one after, except with final level sending back to first
+
             if (SceneManager.GetActiveScene().name.Equals("SampleScene")) {
                 SceneManager.LoadScene("Level2");
             }

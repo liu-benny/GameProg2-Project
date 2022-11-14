@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bladeBehavior : MonoBehaviour
+public class BladeBehavior : MonoBehaviour
 {
     public GameObject blade1;
     public GameObject blade2;
@@ -13,7 +13,6 @@ public class bladeBehavior : MonoBehaviour
 
     public float rotationSpeed;
 
-    // Start is called before the first frame update
     void Start()
     {
         blade1 = GameObject.Find("blade1");
@@ -24,10 +23,9 @@ public class bladeBehavior : MonoBehaviour
         blade6 = GameObject.Find("blade6");
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        // cube.transform.Rotate(0f, 0f, 1f * Time.deltaTime, Space.Self);
         blade1.transform.Rotate(new Vector3(0, 0, rotationSpeed) * Time.deltaTime);
         blade2.transform.Rotate(new Vector3(0, 0, rotationSpeed) * Time.deltaTime);
         blade3.transform.Rotate(new Vector3(0, 0, rotationSpeed) * Time.deltaTime);

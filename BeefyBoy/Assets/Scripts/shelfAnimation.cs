@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shelfAnimation : MonoBehaviour
+public class ShelfAnimation : MonoBehaviour
 {   
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip creekWood;
 
     private Animator anim;
     private GameObject particles;
-    // Start is called before the first frame update
+    
     void Start()
     {
         anim = this.transform.parent.GetComponent<Animator>();

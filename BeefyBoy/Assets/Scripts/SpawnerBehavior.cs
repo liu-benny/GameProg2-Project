@@ -5,7 +5,6 @@ using UnityEngine;
 public class SpawnerBehavior : MonoBehaviour
 {
     public GameObject[] myObjects;
-    // public GameObject cubePrefab;
     float next_spawn_time;
 
     void Start()
@@ -14,7 +13,7 @@ public class SpawnerBehavior : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         int randomIndex = Random.Range(0, myObjects.Length);

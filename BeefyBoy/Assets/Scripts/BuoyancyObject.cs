@@ -5,25 +5,24 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class BuoyancyObject : MonoBehaviour
 {
-    public Transform[] Floaters;
-    public float UnderWaterDrag = 3f;
-    public float UnderWaterAngularDrag = 1f;
-    public float AirDrag = 0f;
-    public float AirAngularDrag = 0.05f;
-    public float FloatingPower = 15f;
-    public float WaterHeight = 0f;
+    public Transform[] floaters;
+    public float underwaterDrag = 3f;
+    public float underwaterAngularDrag = 1f;
+    public float airDrag = 0f;
+    public float airAngularDrag = 0.05f;
+    public float floatingPower = 15f;
+    public float waterHeight = 0f;
 
-    Rigidbody Rb;
-    int FloatersUnderWater;
-    bool Underwater;
+    Rigidbody rigidbody;
+    int floatersUnderwater;
+    bool underwater;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
-        Rb = this.GetComponent<Rigidbody>();
+        rigidbody = this.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         FixedUpdate();
@@ -31,24 +30,24 @@ public class BuoyancyObject : MonoBehaviour
 
     void FixedUpdate()
     {
-        FloatersUnderWater = 0;
-        for(int i = 0; i < Floaters.Length; i++)
+        floatersUnderwater = 0;
+        for(int i = 0; i < floaters.Length; i++)
         {
-            float diff = Floaters[i].position.y - WaterHeight;
+            float diff = floaters[i].position.y - waterHeight;
             if (diff < 0)
             {
-                Rb.AddForceAtPosition(Vector3.up * FloatingPower * Mathf.Abs(diff), Floaters[i].position, ForceMode.Force);
-                FloatersUnderWater += 1;
-                if (!Underwater)
+                rigidbody.AddForceAtPosition(Vector3.up * floatingPower * Mathf.Abs(diff), floaters[i].position, ForceMode.Force);
+                floatersUnderwater += 1;
+                if (!underwater)
                 {
-                    Underwater = true;
+                    underwater = true;
                     SwitchState(true);
                 }
             }
         }
-        if (Underwater && FloatersUnderWater==0)
+        if (underwater && floatersUnderwater==0)
         {
-            Underwater = false;
+            underwater = false;
             SwitchState(false);
         }
     }
@@ -57,13 +56,13 @@ public class BuoyancyObject : MonoBehaviour
     {
         if (isUnderwater)
         {
-            Rb.drag = UnderWaterDrag;
-            Rb.angularDrag = UnderWaterAngularDrag;
+            rigidbody.drag = underwaterDrag;
+            rigidbody.angularDrag = underwaterAngularDrag;
         }
         else
         {
-            Rb.drag = AirDrag;
-            Rb.angularDrag = AirAngularDrag;
+            rigidbody.drag = airDrag;
+            rigidbody.angularDrag = airAngularDrag;
         }
     }
 

@@ -35,13 +35,13 @@ public class Fire2Controller : MonoBehaviour
             currentTime = System.DateTime.Now;
             time = Random.Range(1, 3);
             delay = currentTime.AddSeconds(time);
-            // Set fire "invisible"
+            
             if (isVisible == true)
             {
                 isVisible = false;
                 fire2.transform.position = new Vector3(initialX, 4.0f, initialZ);
             }
-            // Set fire visible
+            
             else
             {
                 isVisible = true;
@@ -55,7 +55,7 @@ public class Fire2Controller : MonoBehaviour
     {
         if (collider.gameObject.name == "beefyBoy")
         {
-            movementBB beefyBoyMovement = collider.gameObject.GetComponent<movementBB>();
+            MovementBB beefyBoyMovement = collider.gameObject.GetComponent<MovementBB>();
             if (beefyBoyMovement != null && beefyBoyMovement.health > 0)
             {
                 beefyBoyMovement.health--;
