@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fire3Controller : MonoBehaviour
 {
-[SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip burningClip;
     [SerializeField] private GameObject fire3;
 
@@ -35,13 +35,12 @@ public class Fire3Controller : MonoBehaviour
             currentTime = System.DateTime.Now;
             time = Random.Range(1, 3);
             delay = currentTime.AddSeconds(time);
-            // Set fire "invisible"
+            
             if (isVisible == true)
             {
                 isVisible = false;
                 fire3.transform.position = new Vector3(initialX, 4.0f, initialZ);
             }
-            // Set fire visible
             else
             {
                 isVisible = true;
@@ -55,7 +54,7 @@ public class Fire3Controller : MonoBehaviour
     {
         if (collider.gameObject.name == "beefyBoy")
         {
-            movementBB beefyBoyMovement = collider.gameObject.GetComponent<movementBB>();
+            MovementBB beefyBoyMovement = collider.gameObject.GetComponent<MovementBB>();
             if (beefyBoyMovement != null && beefyBoyMovement.health > 0)
             {
                 beefyBoyMovement.health--;

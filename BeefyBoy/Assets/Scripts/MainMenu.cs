@@ -13,13 +13,11 @@ public class MainMenu : MonoBehaviour
     private GameObject OptionsButton;
     [SerializeField]
     private GameObject QuitButton;
-    // Start is called before the first frame update
+    
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         
@@ -30,7 +28,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void ShowOptions(){
-      //Fill in when options panel is done
+      // -- Fill in when options panel is done
     }
 
      public void QuitGame(){

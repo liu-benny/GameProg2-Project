@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movementBB : MonoBehaviour
+public class MovementBB : MonoBehaviour
 {   
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip rollClip;
@@ -26,7 +26,7 @@ public class movementBB : MonoBehaviour
         beefyBoyTransform = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         xInput = Input.GetAxis("Horizontal");

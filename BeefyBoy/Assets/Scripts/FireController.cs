@@ -55,7 +55,7 @@ public class Fire1Controller : MonoBehaviour
     {
         if (collider.gameObject.name == "beefyBoy")
         {
-            movementBB beefyBoyMovement = collider.gameObject.GetComponent<movementBB>();
+            MovementBB beefyBoyMovement = collider.gameObject.GetComponent<MovementBB>();
             if (beefyBoyMovement != null && beefyBoyMovement.health > 0)
             {
                 beefyBoyMovement.health--;
