@@ -68,6 +68,12 @@ public class movementBB : MonoBehaviour
                 audioSource.PlayOneShot(rollClip);
             }
         }
+
+        if (other.gameObject.tag == "WaterObstacle"){
+            rb.drag = 10;
+        } else{
+            rb.drag = 1;
+        }
     }
 
     void KillBeefyBoy() {
