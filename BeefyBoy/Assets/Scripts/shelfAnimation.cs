@@ -6,6 +6,7 @@ public class ShelfAnimation : MonoBehaviour
 {   
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip creekWood;
+    private bool played = false;
 
     private Animator anim;
     private GameObject particles;
@@ -17,9 +18,11 @@ public class ShelfAnimation : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
+        
         if(other.gameObject.name == "beefyBoy"){
-            if (!audioSource.isPlaying){
+            if (!audioSource.isPlaying && played == false){
                 audioSource.PlayOneShot(creekWood);
+                played = true;
             }
             anim.enabled = true;
             anim.Play("Shelf");
