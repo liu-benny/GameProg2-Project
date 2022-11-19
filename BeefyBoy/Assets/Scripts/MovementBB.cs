@@ -19,7 +19,7 @@ public class MovementBB : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
     private float xInput, zInput;
-    private bool isFloored = true;
+    // private bool isFloored = true;
 
     void Start()
     {
@@ -46,7 +46,7 @@ public class MovementBB : MonoBehaviour
         Vector3 beefyBoyPosition = beefyBoyTransform.position;
         groundCheck.position = new Vector3(beefyBoyPosition.x, beefyBoyPosition.y - 0.15f, beefyBoyPosition. z);
 
-        if (Input.GetKeyDown("space") && isFloored == true)
+        if (Input.GetKeyDown("space") && IsGrounded())
         {
             rb.AddForce(new Vector3(0,jump,0), ForceMode.Impulse);
         }
@@ -56,23 +56,21 @@ public class MovementBB : MonoBehaviour
             KillBeefyBoy();
         }
     }
-    /*
-    Incase needed in the future
+    
     bool IsGrounded()
     {
         return Physics.CheckSphere(groundCheck.position, .1f, ground);
     }
-    */
 
     void OnCollisionStay(Collision other)
     {
-        if (other.gameObject.tag == "Furniture"){
-            if (!audioSource.isPlaying){
-                audioSource.PlayOneShot(rollClip);
-            }
-            Debug.Log("Floor");
-            isFloored = true;
-        }
+        // if (other.gameObject.tag == "Furniture"){
+        //     if (!audioSource.isPlaying){
+        //         audioSource.PlayOneShot(rollClip);
+        //     }
+        //     Debug.Log("Floor");
+        //     isFloored = true;
+        // }
 
         if (other.gameObject.tag == "WaterObstacle"){
             rb.drag = 10;
@@ -82,12 +80,12 @@ public class MovementBB : MonoBehaviour
     }
     
     void OnCollisionExit(Collision other) {
-           if (other.gameObject.tag == "Furniture"){
-            isFloored = false;
-            Debug.Log("Air");
-        }
+        // if (other.gameObject.tag == "Furniture"){
+        //     isFloored = false;
+        //     Debug.Log("Air");
+        // }
     }
-
+    
     void KillBeefyBoy() {
         Debug.Log("Beefy boy health reached 0. Beefy boy is dead!");
         this.gameObject.SetActive(false);

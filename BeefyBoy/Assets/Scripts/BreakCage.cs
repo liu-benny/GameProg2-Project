@@ -37,14 +37,17 @@ public class BreakCage : MonoBehaviour
         Debug.Log(speed);
 
         //todo threshold change later
-        if (speed < -4.0 && other.gameObject != beefyBoy && this.gameObject.activeInHierarchy) {
+        if (speed < -4.0 && other.gameObject.layer == 6 && this.gameObject.activeInHierarchy) {
 
             ContactPoint contact = other.contacts[0];
             Vector3 pos = contact.point;
             Instantiate(explosion, pos, Quaternion. Euler(-90, 0, 0));
+            
             audioSource.PlayOneShot(cageBreak);
-
             this.gameObject.SetActive(false);
+
+            beefyBoy.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
+            beefyBoy.GetComponent<FallDamage>().enabled = true;
         }
     }
 }
