@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44832057, g: 0.49835443, b: 0.5756024, a: 1}
+  m_IndirectSpecularColor: {r: 0.4483204, g: 0.49835402, b: 0.57560164, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 5654284}
   - component: {fileID: 5654283}
   - component: {fileID: 5654282}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: panci.009_Cylinder.098
   m_TagString: WaterObstacle
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 25474844}
   - component: {fileID: 25474846}
   - component: {fileID: 25474845}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: meat.007_Icosphere.011
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 40227037}
   - component: {fileID: 40227039}
   - component: {fileID: 40227038}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: meat.005_Icosphere.009
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -6322,7 +6322,7 @@ GameObject:
   - component: {fileID: 130530187}
   - component: {fileID: 130530186}
   - component: {fileID: 130530185}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pan_Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6419,7 +6419,7 @@ GameObject:
   - component: {fileID: 131531684}
   - component: {fileID: 131531686}
   - component: {fileID: 131531685}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: meat.011_Icosphere.028
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -6825,7 +6825,7 @@ GameObject:
   - component: {fileID: 178688703}
   - component: {fileID: 178688705}
   - component: {fileID: 178688704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: meat.009_Icosphere.026
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -6943,7 +6943,7 @@ GameObject:
   - component: {fileID: 213674770}
   - component: {fileID: 213674769}
   - component: {fileID: 213674772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7402,7 +7402,7 @@ GameObject:
   - component: {fileID: 282601637}
   - component: {fileID: 282601639}
   - component: {fileID: 282601638}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: meat.008_Icosphere.024
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -7656,6 +7656,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5af7fbf515524f04faf06cb4272b4364, type: 3}
       propertyPath: m_Name
       value: PaperTowelRoll
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5af7fbf515524f04faf06cb4272b4364, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5af7fbf515524f04faf06cb4272b4364, type: 3}
@@ -8426,7 +8430,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382227921}
-  m_LocalRotation: {x: -0.01207614, y: 0.9843803, z: -0.15891473, w: -0.07480436}
+  m_LocalRotation: {x: -0.01207614, y: 0.9843803, z: -0.15891473, w: -0.074804366}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9142,7 +9146,7 @@ GameObject:
   - component: {fileID: 433136956}
   - component: {fileID: 433136955}
   - component: {fileID: 433136958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottle (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10627,6 +10631,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8974964810278666818, guid: 93de2455268f2f94fa1b2c35ed49701b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93de2455268f2f94fa1b2c35ed49701b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -10695,6 +10703,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3936059566220637877, guid: 93de2455268f2f94fa1b2c35ed49701b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93de2455268f2f94fa1b2c35ed49701b, type: 3}
 --- !u!1 &632840414
@@ -10709,7 +10721,7 @@ GameObject:
   - component: {fileID: 632840416}
   - component: {fileID: 632840415}
   - component: {fileID: 632840418}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u0426\u0438\u043B\u0438\u043D\u0434\u0440.013"
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -11595,7 +11607,7 @@ GameObject:
   - component: {fileID: 682131093}
   - component: {fileID: 682131095}
   - component: {fileID: 682131094}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: meat.010_Icosphere.027
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -12141,7 +12153,7 @@ GameObject:
   - component: {fileID: 707833213}
   - component: {fileID: 707833212}
   - component: {fileID: 707833215}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottle (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17821,7 +17833,7 @@ GameObject:
   - component: {fileID: 811153213}
   - component: {fileID: 811153212}
   - component: {fileID: 811153214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: lettuce.001_Icosphere.068
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -18381,7 +18393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 877791801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: doneSoup
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -18424,7 +18436,7 @@ GameObject:
   - component: {fileID: 878172786}
   - component: {fileID: 878172785}
   - component: {fileID: 878172787}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: lettuce.002_Icosphere.069
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -18574,7 +18586,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878834731}
-  m_LocalRotation: {x: -0.01071709, y: 0.98710126, z: -0.14103049, w: -0.075011104}
+  m_LocalRotation: {x: -0.010717094, y: 0.98710126, z: -0.14103048, w: -0.075011134}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -18677,7 +18689,7 @@ GameObject:
   - component: {fileID: 881022985}
   - component: {fileID: 881022984}
   - component: {fileID: 881022983}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19237,7 +19249,7 @@ GameObject:
   - component: {fileID: 926286478}
   - component: {fileID: 926286480}
   - component: {fileID: 926286479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: meat.004_Icosphere.008
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -19694,7 +19706,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.012076139, y: 0.9843803, z: -0.15891473, w: -0.074804366}
+  m_LocalRotation: {x: -0.012076141, y: 0.9843803, z: -0.15891473, w: -0.07480437}
   m_LocalPosition: {x: -30.131836, y: 3.7372003, z: -16.594038}
   m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
   m_Children: []
@@ -21109,7 +21121,7 @@ GameObject:
   - component: {fileID: 1095518005}
   - component: {fileID: 1095518004}
   - component: {fileID: 1095518006}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: basket.001_Cube.056
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -21562,7 +21574,7 @@ GameObject:
   - component: {fileID: 1179996444}
   - component: {fileID: 1179996443}
   - component: {fileID: 1179996446}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottle (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23162,7 +23174,7 @@ GameObject:
   - component: {fileID: 1375056249}
   - component: {fileID: 1375056251}
   - component: {fileID: 1375056250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: meat.003_Icosphere.007
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -23341,7 +23353,7 @@ GameObject:
   - component: {fileID: 1383032894}
   - component: {fileID: 1383032893}
   - component: {fileID: 1383032892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: small_bowl.001_Cylinder.050
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -23598,7 +23610,7 @@ GameObject:
   - component: {fileID: 1452104786}
   - component: {fileID: 1452104788}
   - component: {fileID: 1452104787}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: meat.006_Icosphere.010
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -23961,7 +23973,7 @@ GameObject:
   - component: {fileID: 1463465213}
   - component: {fileID: 1463465212}
   - component: {fileID: 1463465215}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24844,7 +24856,7 @@ GameObject:
   - component: {fileID: 1557186022}
   - component: {fileID: 1557186021}
   - component: {fileID: 1557186024}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25416,7 +25428,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599699762}
-  m_LocalRotation: {x: -0.013434795, y: 0.9813269, z: -0.17679381, w: -0.07457232}
+  m_LocalRotation: {x: -0.0134347975, y: 0.9813269, z: -0.17679381, w: -0.07457234}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -30829,7 +30841,7 @@ GameObject:
   - component: {fileID: 1681652047}
   - component: {fileID: 1681652046}
   - component: {fileID: 1681652049}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottle (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37165,7 +37177,7 @@ GameObject:
   - component: {fileID: 1791439096}
   - component: {fileID: 1791439095}
   - component: {fileID: 1791439098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37718,7 +37730,7 @@ GameObject:
   - component: {fileID: 1860166923}
   - component: {fileID: 1860166922}
   - component: {fileID: 1860166924}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38567,7 +38579,7 @@ GameObject:
   - component: {fileID: 1942518123}
   - component: {fileID: 1942518122}
   - component: {fileID: 1942518124}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: lettuce_Icosphere.067
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -39852,6 +39864,10 @@ PrefabInstance:
       value: IkeaGlass
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8f7b5306ab15a59408ce647f97a6245f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8f7b5306ab15a59408ce647f97a6245f, type: 3}
       propertyPath: m_TagString
       value: Furniture
       objectReference: {fileID: 0}
@@ -40108,6 +40124,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &2055277875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055277868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ccad58b7dbfe84bbb229f7ae5f5b07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageClip: {fileID: 8300000, guid: cf6288b84c305ea41924bcc4d6bf7f8c, type: 3}
 --- !u!1 &2056366573
 GameObject:
   m_ObjectHideFlags: 0
@@ -40495,7 +40524,7 @@ GameObject:
   - component: {fileID: 2085882829}
   - component: {fileID: 2085882828}
   - component: {fileID: 2085882831}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u041E\u043A\u0440\u0443\u0436\u043D\u043E\u0441\u0442\u044C.001"
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -41090,7 +41119,7 @@ GameObject:
   - component: {fileID: 2133435651}
   - component: {fileID: 2133435650}
   - component: {fileID: 2133435653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: steel_tray_Cube.048
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41186,7 +41215,7 @@ GameObject:
   - component: {fileID: 2140221152}
   - component: {fileID: 2140221151}
   - component: {fileID: 2140221153}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: big_bowl.004_Cylinder.081
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -41653,6 +41682,7 @@ GameObject:
   - component: {fileID: 6074329442740786478}
   - component: {fileID: 5108422283232580894}
   - component: {fileID: 6599766630111843892}
+  - component: {fileID: 509797733110878958}
   m_Layer: 6
   m_Name: Cylinder.064
   m_TagString: Untagged
@@ -41660,6 +41690,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &509797733110878958
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509797733110878957}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1231166066402820564, guid: be151bcf6bb5b9d448a12da9d9aa3940, type: 3}
 --- !u!23 &521518864007266217
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42393,7 +42437,7 @@ GameObject:
   - component: {fileID: 7247704493003540715}
   - component: {fileID: 7247704493003540716}
   - component: {fileID: 1407071545930302533}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43426,7 +43470,7 @@ GameObject:
   - component: {fileID: 1149949637496693144}
   - component: {fileID: 3004435060198718989}
   - component: {fileID: 3004435060198718988}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: milk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44897,7 +44941,7 @@ GameObject:
   - component: {fileID: 1478153306295771049}
   - component: {fileID: 521518864007266217}
   - component: {fileID: 5311768532214793285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46353,6 +46397,7 @@ GameObject:
   - component: {fileID: 1054117776189696013}
   - component: {fileID: 8145728328785176500}
   - component: {fileID: 7602947100716328144}
+  - component: {fileID: 7729147133494205359}
   m_Layer: 6
   m_Name: Cylinder.065
   m_TagString: Untagged
@@ -46360,6 +46405,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7729147133494205359
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7729147133494205358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1418337770082825235, guid: be151bcf6bb5b9d448a12da9d9aa3940, type: 3}
 --- !u!4 &7744417748796602511
 Transform:
   m_ObjectHideFlags: 0
@@ -47196,7 +47255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8184674532493372575}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dish Rack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
