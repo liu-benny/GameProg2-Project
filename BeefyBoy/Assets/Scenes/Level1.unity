@@ -20384,7 +20384,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5916594857973724aa95bdad96d384c5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -26596,7 +26596,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599699762}
-  m_LocalRotation: {x: -0.014777551, y: 0.97963613, z: -0.18416141, w: -0.07860834}
+  m_LocalRotation: {x: -0.014777542, y: 0.97963613, z: -0.1841614, w: -0.078608304}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
