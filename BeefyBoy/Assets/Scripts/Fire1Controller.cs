@@ -10,6 +10,9 @@ public class FireController : MonoBehaviour
     [SerializeField] private GameObject fire2;
     [SerializeField] private GameObject fire3;
 
+    GameObject playerUI;
+    HealthBar healthBar;
+
     
     private int time;
     private bool isVisible;
@@ -19,6 +22,9 @@ public class FireController : MonoBehaviour
     
     void Start()
     {
+        playerUI = GameObject.Find("HealthBar");
+        healthBar = playerUI.GetComponent<HealthBar>();
+
         time = Random.Range(3, 7); 
         isVisible = true;
         current_time = System.DateTime.Now;
@@ -62,7 +68,9 @@ public class FireController : MonoBehaviour
             if (beefyBoyMovement != null && beefyBoyMovement.health > 0)
             {
                 beefyBoyMovement.health--;
+                healthBar.SetHealth(beefyBoyMovement.health);
                 Debug.Log("Health: " + beefyBoyMovement.health);
+                
             }
             if (beefyBoyMovement.health == 0)
             {

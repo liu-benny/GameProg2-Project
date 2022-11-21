@@ -24,6 +24,8 @@ public class ChangeLevel : MonoBehaviour
 
             if (SceneManager.GetActiveScene().name.Equals("SampleScene")) {
                 SceneManager.LoadScene("Level2");
+            }else if (SceneManager.GetActiveScene().name.Equals("Level1")) {
+                SceneManager.LoadScene("Level2");
             }
             else if (SceneManager.GetActiveScene().name.Equals("Level2")) {
                 SceneManager.LoadScene("BossLevel");

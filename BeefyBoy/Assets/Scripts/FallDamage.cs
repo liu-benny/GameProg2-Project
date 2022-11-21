@@ -9,12 +9,16 @@ public class FallDamage : MonoBehaviour
     GameObject beefyBoy;
     AudioSource audioSource;
     MovementBB beefyBoyMovement;
+    GameObject playerUI;
+    HealthBar healthBar;
     [SerializeField] AudioClip damageClip;
     
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         beefyBoy = GameObject.Find("beefyBoy");
+        playerUI = GameObject.Find("HealthBar");
+        healthBar = playerUI.GetComponent<HealthBar>();
         audioSource = beefyBoy.GetComponent<AudioSource>();
         beefyBoyMovement = beefyBoy.GetComponent<MovementBB>();
     }
@@ -41,6 +45,7 @@ public class FallDamage : MonoBehaviour
             {
                 int damageMultiplier = -7;
                 beefyBoyMovement.health -= (int) (damageMultiplier * fallDamageSpeed);
+                healthBar.SetHealth(beefyBoyMovement.health);
                 Debug.Log("Health: " + beefyBoyMovement.health);
                 audioSource.PlayOneShot(damageClip);
             }

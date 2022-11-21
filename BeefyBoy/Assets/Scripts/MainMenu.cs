@@ -13,6 +13,8 @@ public class MainMenu : MonoBehaviour
     private GameObject OptionsButton;
     [SerializeField]
     private GameObject QuitButton;
+   
+    
     
     void Start()
     {
@@ -24,7 +26,7 @@ public class MainMenu : MonoBehaviour
     }
 
      public void StartGame(){
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Level1");
     }
 
     public void ShowOptions(){
@@ -35,4 +37,6 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Game Exit");
         Application.Quit();
     }
+
+   
 }
