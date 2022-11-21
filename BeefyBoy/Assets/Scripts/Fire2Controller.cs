@@ -8,6 +8,9 @@ public class Fire2Controller : MonoBehaviour
     [SerializeField] private AudioClip burningClip;
     [SerializeField] private GameObject fire2;
 
+    GameObject playerUI;
+    HealthBar healthBar;
+
     float initialX;
     float initialY;
     float initialZ;
@@ -19,6 +22,9 @@ public class Fire2Controller : MonoBehaviour
     
     void Start()
     {
+        playerUI = GameObject.Find("HealthBar");
+        healthBar = playerUI.GetComponent<HealthBar>();
+
         time = Random.Range(3, 7); 
         isVisible = true;
         currentTime = System.DateTime.Now;
@@ -59,6 +65,7 @@ public class Fire2Controller : MonoBehaviour
             if (beefyBoyMovement != null && beefyBoyMovement.health > 0)
             {
                 beefyBoyMovement.health--;
+                healthBar.SetHealth(beefyBoyMovement.health);
                 Debug.Log("Health: " + beefyBoyMovement.health);
             }
             if (beefyBoyMovement.health == 0)

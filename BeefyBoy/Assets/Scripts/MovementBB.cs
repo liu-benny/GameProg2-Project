@@ -8,6 +8,10 @@ public class MovementBB : MonoBehaviour
     [SerializeField] AudioClip rollClip;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
+    [SerializeField] private GameObject menu;
+    [SerializeField]GameObject deathScreen;
+
+    DeathUI dScript;
 
     public Rigidbody rb;
     public Transform cam;
@@ -25,6 +29,7 @@ public class MovementBB : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         beefyBoyTransform = GetComponent<Transform>();
+        dScript = deathScreen.GetComponent<DeathUI>();
     }
 
     
@@ -51,9 +56,15 @@ public class MovementBB : MonoBehaviour
             rb.AddForce(new Vector3(0,jump,0), ForceMode.Impulse);
         }
 
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            menu.GetComponent<PauseMenu>().PauseGame();
+        }
+
         if (health <= 0)
         {
             KillBeefyBoy();
+            
+            
         }
     }
     
@@ -62,32 +73,30 @@ public class MovementBB : MonoBehaviour
         return Physics.CheckSphere(groundCheck.position, .1f, ground);
     }
 
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.name == "Floor"){
+            health = 0;
+            KillBeefyBoy();
+        }
+        
+    }
+
     void OnCollisionStay(Collision other)
     {
-        // if (other.gameObject.tag == "Furniture"){
-        //     if (!audioSource.isPlaying){
-        //         audioSource.PlayOneShot(rollClip);
-        //     }
-        //     Debug.Log("Floor");
-        //     isFloored = true;
-        // }
-
         if (other.gameObject.tag == "WaterObstacle"){
-            rb.drag = 10;
+            rb.drag = 3;
         } else{
             rb.drag = 1;
         }
     }
     
     void OnCollisionExit(Collision other) {
-        // if (other.gameObject.tag == "Furniture"){
-        //     isFloored = false;
-        //     Debug.Log("Air");
-        // }
+ 
     }
     
     void KillBeefyBoy() {
         Debug.Log("Beefy boy health reached 0. Beefy boy is dead!");
+        deathScreen.SetActive(true);
         this.gameObject.SetActive(false);
         Destroy(this);
     }
