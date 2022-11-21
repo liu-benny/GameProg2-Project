@@ -507,6 +507,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6968625664918089127}
+  - component: {fileID: 3359556905461767697}
+  - component: {fileID: 8022883248712452112}
   m_Layer: 0
   m_Name: alien
   m_TagString: Untagged
@@ -534,3 +536,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3359556905461767697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7781754729426368285}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.52380276, y: 0.87354285, z: 0.34869334}
+  m_Center: {x: -0.0032467842, y: 0.40584734, z: -0.02905266}
+--- !u!54 &8022883248712452112
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7781754729426368285}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0.5
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
