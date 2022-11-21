@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -29,5 +30,21 @@ public class PauseMenu : MonoBehaviour
       Pause.SetActive(false);
       Time.timeScale = 1f;
       
+    }
+
+    public void TryAgain(){
+      if (SceneManager.GetActiveScene().name.Equals("Level1")) {
+                SceneManager.LoadScene("Level1");
+            }else if (SceneManager.GetActiveScene().name.Equals("Level2")) {
+                SceneManager.LoadScene("Level2");
+            }
+            else if (SceneManager.GetActiveScene().name.Equals("BossLevel")) {
+                SceneManager.LoadScene("BossLevel");
+            }
+           
+    }
+
+    public void QuitGame(){
+      SceneManager.LoadScene("MainMenu");
     }
 }

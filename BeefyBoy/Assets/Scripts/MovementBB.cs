@@ -9,8 +9,10 @@ public class MovementBB : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
     [SerializeField] private GameObject menu;
+    [SerializeField]GameObject deathScreen;
 
-    DeathUI deathScreen;
+    DeathUI dScript;
+
     public Rigidbody rb;
     public Transform cam;
     public Transform beefyBoyTransform;
@@ -27,7 +29,7 @@ public class MovementBB : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         beefyBoyTransform = GetComponent<Transform>();
-        deathScreen = GameObject.Find("DeathScreen").GetComponent<DeathUI>();
+        dScript = deathScreen.GetComponent<DeathUI>();
     }
 
     
@@ -61,7 +63,8 @@ public class MovementBB : MonoBehaviour
         if (health <= 0)
         {
             KillBeefyBoy();
-            deathScreen.DeathPopUp();
+            
+            
         }
     }
     
@@ -70,10 +73,16 @@ public class MovementBB : MonoBehaviour
         return Physics.CheckSphere(groundCheck.position, .1f, ground);
     }
 
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.name == "Floor"){
+            health = 0;
+            KillBeefyBoy();
+        }
+        
+    }
+
     void OnCollisionStay(Collision other)
     {
-        
-
         if (other.gameObject.tag == "WaterObstacle"){
             rb.drag = 3;
         } else{
@@ -87,6 +96,7 @@ public class MovementBB : MonoBehaviour
     
     void KillBeefyBoy() {
         Debug.Log("Beefy boy health reached 0. Beefy boy is dead!");
+        deathScreen.SetActive(true);
         this.gameObject.SetActive(false);
         Destroy(this);
     }
