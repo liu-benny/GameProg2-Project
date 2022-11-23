@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6303126203386260958}
   - component: {fileID: 8418387421632461084}
   - component: {fileID: 799152725793621830}
-  - component: {fileID: 6758977328037397656}
+  - component: {fileID: 9216663021576103703}
   m_Layer: 0
   m_Name: Box01
   m_TagString: Untagged
@@ -116,7 +116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6758977328037397656
+--- !u!114 &9216663021576103703
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +125,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 229776679416140270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67a656e0ccced234a8c16f25e041620a, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a6f92274e57be94b85134038d0b0b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conveyorBelt4: {fileID: 0}
+  floor: {fileID: 0}
+  packagingBoxBuilding: {fileID: 0}
