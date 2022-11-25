@@ -9,7 +9,7 @@ public class SpawnObjectBehavior : MonoBehaviour
     
     void Start()
     {
-        packagingBoxBuilding = GameObject.Find("qw1/low_buildingH");
+        packagingBoxBuilding = GameObject.Find("curtains/curtainCollider");
         floor = GameObject.Find("floor");
 
     }

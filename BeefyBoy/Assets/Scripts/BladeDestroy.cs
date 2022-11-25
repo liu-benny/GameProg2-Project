@@ -6,21 +6,24 @@ using UnityEngine.UI;
 public class BladeDestroy : MonoBehaviour
 {
     public GameObject explodeEffect;
-     [SerializeField]
+    [SerializeField]
     public GameObject HealthBarplane;
     float Bladehealth = 1f ; 
-    
-    void Start()
-    {
-        
-        // Debug.Log("health:" + Bladehealth);
-    }
+    public Material glass;
 
+
+    void Start()
+    {        
+        // Debug.Log("health:" + Bladehealth);
+        
+    }
     
     void Update()
     {
+        GameObject exitDoor = GameObject.Find("exit-door");
         if (Bladehealth == 0f){
             // stopBelt();
+            exitDoor.GetComponent<Renderer>().material = glass;
         }
     }
 
@@ -41,5 +44,13 @@ public class BladeDestroy : MonoBehaviour
 
     }
 
+    void openDoorAnimation()
+    {
+        GetComponent<Renderer>().material = LoadResourceAsMaterial("Assets/BossLevelAsset/Materials/Glass.mat");
+    }
+
+    Material LoadResourceAsMaterial(string resourcePath){
+        return Resources.Load(resourcePath, typeof(Material)) as Material;
+    }
     
 }
