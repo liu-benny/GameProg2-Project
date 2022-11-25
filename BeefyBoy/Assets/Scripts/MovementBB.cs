@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovementBB : MonoBehaviour
 {   
@@ -12,7 +13,7 @@ public class MovementBB : MonoBehaviour
     [SerializeField]GameObject deathScreen;
 
     DeathUI dScript;
-
+    Scene currentScene;
     public Rigidbody rb;
     public Transform cam;
     public Transform beefyBoyTransform;
@@ -27,6 +28,7 @@ public class MovementBB : MonoBehaviour
 
     void Start()
     {
+        currentScene = SceneManager.GetActiveScene();
         rb = GetComponent<Rigidbody>();
         beefyBoyTransform = GetComponent<Transform>();
         dScript = deathScreen.GetComponent<DeathUI>();
@@ -35,6 +37,7 @@ public class MovementBB : MonoBehaviour
     
     void Update()
     {
+        Debug.Log(currentScene.name);
         xInput = Input.GetAxis("Horizontal");
         zInput = Input.GetAxis("Vertical");
         Vector3 direction = new Vector3(xInput, 0f, zInput).normalized;
@@ -49,12 +52,13 @@ public class MovementBB : MonoBehaviour
         }
 
         Vector3 beefyBoyPosition = beefyBoyTransform.position;
-        groundCheck.position = new Vector3(beefyBoyPosition.x, beefyBoyPosition.y - 0.15f, beefyBoyPosition. z);
+        if (currentScene.name == "BossLevel") 
+            groundCheck.position = new Vector3(beefyBoyPosition.x, beefyBoyPosition.y - 0.65f, beefyBoyPosition. z);
+        else 
+            groundCheck.position = new Vector3(beefyBoyPosition.x, beefyBoyPosition.y - 0.15f, beefyBoyPosition. z);
 
         if (Input.GetKeyDown("space") && IsGrounded())
-        {
-            rb.AddForce(new Vector3(0,jump,0), ForceMode.Impulse);
-        }
+            rb.AddForce(new Vector3(0, jump, 0), ForceMode.Impulse);
 
         if(Input.GetKeyDown(KeyCode.Escape)){
             menu.GetComponent<PauseMenu>().PauseGame();
@@ -62,19 +66,17 @@ public class MovementBB : MonoBehaviour
 
         if (health <= 0)
         {
-            KillBeefyBoy();
-            
-            
+            KillBeefyBoy();            
         }
     }
     
     bool IsGrounded()
     {
-        return Physics.CheckSphere(groundCheck.position, .1f, ground);
+        return Physics.CheckSphere(groundCheck.position, .1f, ground); 
     }
 
     private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.name == "Floor"){
+        if(other.gameObject.name == "Floor" || other.gameObject.name == "curtainCollider"){
             health = 0;
             KillBeefyBoy();
         }
@@ -91,7 +93,7 @@ public class MovementBB : MonoBehaviour
     }
     
     void OnCollisionExit(Collision other) {
- 
+        
     }
     
     void KillBeefyBoy() {
