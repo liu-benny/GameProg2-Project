@@ -10,20 +10,24 @@ public class BladeDestroy : MonoBehaviour
     public GameObject healthBarplane;
     [SerializeField]
     public GameObject bladeText;
-    float bladehealth = 1f ; 
+    float bladehealth = 1f; 
     public Material glass;
 
     [SerializeField]
     public GameObject doorOpen;
 
+    [SerializeField]
+    public GameObject deathScreen;
 
+    AudioSource audioSource;
+    public AudioClip destroyObjSound;
 
-     
 
 
     void Start()
-    {        
-        // Debug.Log("health:" + Bladehealth);
+    {  
+        audioSource = GetComponent<AudioSource>();      
+     
         
     }
     
@@ -40,30 +44,30 @@ public class BladeDestroy : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-       
+        audioSource.PlayOneShot(destroyObjSound);
         Destroy(other.gameObject);
 
         GameObject node = Instantiate(explodeEffect, null);
         node.transform.position = other.transform.position;
 
         if(other.gameObject.name.Equals("potStew(Clone)") || other.gameObject.name.Equals("meatTenderizer(Clone)") 
-            || other.gameObject.name.Equals("pan(Clone)") || other.gameObject.name.Equals("can(Clone)") ){
+                    || other.gameObject.name.Equals("pan(Clone)") || other.gameObject.name.Equals("can(Clone)") ){
             bladehealth -= 0.2f;
-            healthBarplane.GetComponent<Image>().fillAmount = bladehealth ;
-            // HealthBarplane.GetComponent<Image>().fillAmount -= 0.2f;
-            Debug.Log("health:" + bladehealth);
-            
+            healthBarplane.GetComponent<Image>().fillAmount = bladehealth;
+        }
+
+        if(other.gameObject.name.Equals("beefyBoy") ){
+            deathScreen.SetActive(true);
         }
 
     }
 
     private void DoorOpenHint(){
-        // Debug.Log("disable function be called");
+      
         if(checkBladeHealthIsZore()) {
             bladeText.SetActive(false);
             doorOpen.SetActive(true);
             Invoke("DisableDoorOpenHint", 3f);
-        
         }
         
     }
