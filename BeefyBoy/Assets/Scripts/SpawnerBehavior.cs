@@ -8,8 +8,8 @@ public class SpawnerBehavior : MonoBehaviour
     float next_spawn_time;
 
     // for testing health bar 
-    public GameObject prefab;
-    public Transform testposition;
+    // public GameObject prefab;
+    // public Transform testposition;
 
     void Start()
     {
@@ -27,8 +27,8 @@ public class SpawnerBehavior : MonoBehaviour
             next_spawn_time += 4.0f;
 
             // for testing health bar 
-            GameObject node = Object.Instantiate(prefab, null);
-            node.transform.position = this.testposition.position;
+            // GameObject node = Object.Instantiate(prefab, null);
+            // node.transform.position = this.testposition.position;
         }
 
         

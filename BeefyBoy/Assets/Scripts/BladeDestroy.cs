@@ -107,7 +107,7 @@ public class BladeDestroy : MonoBehaviour
         GetComponent<Renderer>().material = LoadResourceAsMaterial("Assets/BossLevelAsset/Materials/Glass.mat");
     }
 
-    private bool checkBladeHealthIsZore(){
+    public bool checkBladeHealthIsZore(){
         const float EPSINON = 0.000001f; 
         if(( bladehealth >= -EPSINON ) && ( bladehealth <= EPSINON )) {
             return true;
