@@ -2476,8 +2476,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObjects:
   - {fileID: 229776679416140270, guid: d0ff32ba29322af40bedfee4df14f394, type: 3}
-  prefab: {fileID: 7186367261513436775, guid: b7e32ea74859c84419ae087014112837, type: 3}
-  testposition: {fileID: 1033479656}
 --- !u!1001 &204150746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4973,7 +4971,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472892721}
-  m_LocalRotation: {x: 0.33365396, y: -0.62343806, z: 0.33365393, w: 0.6234381}
+  m_LocalRotation: {x: 0.33365396, y: -0.6234381, z: 0.33365396, w: 0.62343806}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5752,7 +5750,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634020747}
-  m_LocalRotation: {x: 0.28073156, y: -0.6489914, z: 0.28073153, w: 0.64899135}
+  m_LocalRotation: {x: 0.2807316, y: -0.64899135, z: 0.2807315, w: 0.64899147}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8315,7 +8313,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039760133}
-  m_LocalRotation: {x: 0.33365402, y: -0.62343806, z: 0.33365396, w: 0.6234382}
+  m_LocalRotation: {x: 0.333654, y: -0.6234381, z: 0.33365405, w: 0.623438}
   m_LocalPosition: {x: 20.5, y: 10.722, z: 16.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -8872,8 +8870,6 @@ MonoBehaviour:
   - {fileID: 7186367261513436775, guid: b7e32ea74859c84419ae087014112837, type: 3}
   - {fileID: 5773589715280228654, guid: 58767578a748b114396f285a089ab9d0, type: 3}
   - {fileID: 6981886742797500218, guid: e7bd59a25bdef334d9f9a9a14a20b678, type: 3}
-  prefab: {fileID: 5773589715280228654, guid: 58767578a748b114396f285a089ab9d0, type: 3}
-  testposition: {fileID: 1033479656}
 --- !u!4 &1067330138
 Transform:
   m_ObjectHideFlags: 0
@@ -17167,7 +17163,7 @@ GameObject:
   - component: {fileID: 1998979184}
   - component: {fileID: 1998979183}
   m_Layer: 5
-  m_Name: Image
+  m_Name: PlayAgain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
