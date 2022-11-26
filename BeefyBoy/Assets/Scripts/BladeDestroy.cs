@@ -7,11 +7,17 @@ public class BladeDestroy : MonoBehaviour
 {
     public GameObject explodeEffect;
     [SerializeField]
-    public GameObject HealthBarplane;
+    public GameObject healthBarplane;
     [SerializeField]
     public GameObject bladeText;
-    float Bladehealth = 1f ; 
+    float bladehealth = 1f ; 
     public Material glass;
+
+    [SerializeField]
+    public GameObject doorOpen;
+
+
+
      
 
 
@@ -24,12 +30,13 @@ public class BladeDestroy : MonoBehaviour
     void Update()
     {
         GameObject exitDoor = GameObject.Find("exit-door");
-        if (Bladehealth == 0f){
+        if (checkBladeHealthIsZore()){
             // stopBelt();
             exitDoor.GetComponent<Renderer>().material = glass;
         }
 
-        disableBladeText();
+        DoorOpenHint();
+       
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -41,22 +48,30 @@ public class BladeDestroy : MonoBehaviour
 
         if(other.gameObject.name.Equals("potStew(Clone)") || other.gameObject.name.Equals("meatTenderizer(Clone)") 
             || other.gameObject.name.Equals("pan(Clone)") || other.gameObject.name.Equals("can(Clone)") ){
-            Bladehealth -= 0.2f;
-            HealthBarplane.GetComponent<Image>().fillAmount = Bladehealth ;
+            bladehealth -= 0.2f;
+            healthBarplane.GetComponent<Image>().fillAmount = bladehealth ;
             // HealthBarplane.GetComponent<Image>().fillAmount -= 0.2f;
-            Debug.Log("health:" + Bladehealth);
+            Debug.Log("health:" + bladehealth);
             
         }
 
     }
 
-    void disableBladeText(){
+    private void DoorOpenHint(){
         // Debug.Log("disable function be called");
         if(checkBladeHealthIsZore()) {
             bladeText.SetActive(false);
+            doorOpen.SetActive(true);
+            Invoke("DisableDoorOpenHint", 3f);
+        
         }
         
     }
+
+    private void DisableDoorOpenHint(){
+        doorOpen.SetActive(false);
+    }
+
 
     void openDoorAnimation()
     {
@@ -65,7 +80,7 @@ public class BladeDestroy : MonoBehaviour
 
     private bool checkBladeHealthIsZore(){
         const float EPSINON = 0.000001f; 
-        if(( Bladehealth >= -EPSINON ) && ( Bladehealth <= EPSINON )) {
+        if(( bladehealth >= -EPSINON ) && ( bladehealth <= EPSINON )) {
             return true;
         }else{
             return false;

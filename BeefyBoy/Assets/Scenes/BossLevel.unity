@@ -2451,6 +2451,7 @@ RectTransform:
   - {fileID: 1050440847}
   - {fileID: 1335973040}
   - {fileID: 63699850}
+  - {fileID: 794281484}
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2544,7 +2545,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472892721}
-  m_LocalRotation: {x: 0.33365396, y: -0.62343806, z: 0.33365393, w: 0.6234381}
+  m_LocalRotation: {x: 0.33365396, y: -0.6234381, z: 0.33365396, w: 0.62343806}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3154,9 +3155,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explodeEffect: {fileID: 0}
-  HealthBarplane: {fileID: 1335973039}
+  healthBarplane: {fileID: 0}
   bladeText: {fileID: 0}
   glass: {fileID: 2100000, guid: b427beb5fbd88334a88f8c2218b30aaf, type: 2}
+  doorOpen: {fileID: 0}
 --- !u!1001 &692976948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3324,6 +3326,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 446595495916475693, guid: d0ff32ba29322af40bedfee4df14f394, type: 3}
   m_PrefabInstance: {fileID: 747260358}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &794281483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 794281484}
+  - component: {fileID: 794281486}
+  - component: {fileID: 794281485}
+  m_Layer: 5
+  m_Name: DoorOpenHint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &794281484
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794281483}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 4, y: 0.8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414034913}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 34, y: 354}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &794281485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794281483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f775515cd99c878498f76ef6a1bc9724, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &794281486
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794281483}
+  m_CullTransparentMesh: 1
 --- !u!1 &820891200
 GameObject:
   m_ObjectHideFlags: 0
@@ -4182,8 +4259,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039760133}
-  m_LocalRotation: {x: 0.33365402, y: -0.62343806, z: 0.33365396, w: 0.6234382}
-  m_LocalPosition: {x: -18.83, y: 10.55, z: 37.31}
+  m_LocalRotation: {x: 0.031160504, y: 0.95990145, z: -0.118666634, w: 0.25206447}
+  m_LocalPosition: {x: -16.175076, y: 33.42883, z: 85.77493}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4196,7 +4273,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039760133}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
@@ -4773,9 +4850,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explodeEffect: {fileID: 8783763866300648245, guid: ece0a02975646ad469b9fddee9780e56, type: 3}
-  HealthBarplane: {fileID: 1335973039}
+  healthBarplane: {fileID: 1335973039}
   bladeText: {fileID: 63699849}
   glass: {fileID: 2100000, guid: b427beb5fbd88334a88f8c2218b30aaf, type: 2}
+  doorOpen: {fileID: 794281483}
 --- !u!1 &1099119939
 GameObject:
   m_ObjectHideFlags: 3
@@ -6084,9 +6162,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explodeEffect: {fileID: 8783763866300648245, guid: ece0a02975646ad469b9fddee9780e56, type: 3}
-  HealthBarplane: {fileID: 0}
+  healthBarplane: {fileID: 0}
   bladeText: {fileID: 0}
   glass: {fileID: 0}
+  doorOpen: {fileID: 0}
 --- !u!1001 &1573355996
 PrefabInstance:
   m_ObjectHideFlags: 0
