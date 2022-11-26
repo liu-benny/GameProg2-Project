@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BladeDestroy : MonoBehaviour
 {
-    float bladehealth = 0.2f; 
+    float bladehealth = 1.0f; 
     public GameObject explodeEffect;
     [SerializeField]
     public GameObject healthBarplane;
