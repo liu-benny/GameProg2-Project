@@ -23,7 +23,7 @@ public class DeathUI : MonoBehaviour
         if(oppacity.alpha <= 1){
             oppacity.alpha += 0.01f;
             titleOppacity.alpha +=0.00085f;
-            Debug.Log(oppacityNum);
+            // Debug.Log(oppacityNum);
         }
         
             

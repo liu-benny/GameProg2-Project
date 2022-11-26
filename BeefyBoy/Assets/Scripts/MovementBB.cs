@@ -37,7 +37,7 @@ public class MovementBB : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(currentScene.name);
+        // Debug.Log(currentScene.name);
         xInput = Input.GetAxis("Horizontal");
         zInput = Input.GetAxis("Vertical");
         Vector3 direction = new Vector3(xInput, 0f, zInput).normalized;
