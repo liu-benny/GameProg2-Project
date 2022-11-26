@@ -38,17 +38,25 @@ public class FallDamage : MonoBehaviour
 
         Debug.Log(fallDamageSpeed);
 
+        // Debug.Log("Cake bounced yo ass");
+        
+
         if (beefyBoyMovement != null && beefyBoyMovement.health > 0) 
         {
-            //todo threshold & multiplier change later
-            if (fallDamageSpeed < -5.0 && other.gameObject.layer == 6 && this.gameObject.activeInHierarchy) 
-            {
-                int damageMultiplier = -7;
-                beefyBoyMovement.health -= (int) (damageMultiplier * fallDamageSpeed);
-                healthBar.SetHealth(beefyBoyMovement.health);
-                Debug.Log("Health: " + beefyBoyMovement.health);
-                audioSource.PlayOneShot(damageClip);
+            Debug.Log(other.gameObject.name);
+
+            if(other.gameObject.name != "Cylinder.003" && other.gameObject.name != "pillow"){
+                if (fallDamageSpeed < -5.0 && other.gameObject.layer == 6 && this.gameObject.activeInHierarchy) {
+                    int damageMultiplier = -7;
+                    beefyBoyMovement.health -= (int) (damageMultiplier * fallDamageSpeed);
+                    healthBar.SetHealth(beefyBoyMovement.health);
+                    // Debug.Log("Health: " + beefyBoyMovement.health);
+                    audioSource.PlayOneShot(damageClip);    
+                }  
             }
+              
+
+           
         }
     }
 }
