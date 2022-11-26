@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class BladeDestroy : MonoBehaviour
 {
+    float bladehealth = 0.2f; 
     public GameObject explodeEffect;
     [SerializeField]
     public GameObject healthBarplane;
     [SerializeField]
     public GameObject bladeText;
-    float bladehealth = 1f; 
+   
     public Material glass;
 
     [SerializeField]
-    public GameObject doorOpen;
+    public GameObject doorOpenHint;
 
     [SerializeField]
     public GameObject deathScreen;
@@ -22,24 +23,37 @@ public class BladeDestroy : MonoBehaviour
     AudioSource audioSource;
     public AudioClip destroyObjSound;
 
+    private bool displayHint = true;
+
+    public GameObject[] blets;
+
+    public GameObject objSpawner;
+    public GameObject boxSpawner;
+    public GameObject blade;
+
 
 
     void Start()
     {  
         audioSource = GetComponent<AudioSource>();      
-     
+        
         
     }
     
     void Update()
     {
         GameObject exitDoor = GameObject.Find("exit-door");
+        // Debug.Log("Health: " + bladehealth);
         if (checkBladeHealthIsZore()){
-            // stopBelt();
             exitDoor.GetComponent<Renderer>().material = glass;
         }
 
-        DoorOpenHint();
+        if(displayHint){
+            DoorOpenHint();
+        }
+      
+
+        
        
     }
 
@@ -53,6 +67,9 @@ public class BladeDestroy : MonoBehaviour
         if(other.gameObject.name.Equals("potStew(Clone)") || other.gameObject.name.Equals("meatTenderizer(Clone)") 
                     || other.gameObject.name.Equals("pan(Clone)") || other.gameObject.name.Equals("can(Clone)") ){
             bladehealth -= 0.2f;
+            if(bladehealth < 0){
+                bladehealth = 0;
+            }
             healthBarplane.GetComponent<Image>().fillAmount = bladehealth;
         }
 
@@ -65,15 +82,23 @@ public class BladeDestroy : MonoBehaviour
     private void DoorOpenHint(){
       
         if(checkBladeHealthIsZore()) {
+            Debug.Log("Enter the if, show then not show");
             bladeText.SetActive(false);
-            doorOpen.SetActive(true);
+            doorOpenHint.SetActive(true);
             Invoke("DisableDoorOpenHint", 3f);
+            BeltStopMove();
+            displayHint = false;
+            objSpawner.SetActive(false);
+            boxSpawner.SetActive(false);
+            blade.GetComponent<BladeBehavior>().rotationSpeed = 0;
         }
+        
         
     }
 
     private void DisableDoorOpenHint(){
-        doorOpen.SetActive(false);
+        doorOpenHint.SetActive(false);
+        // Destroy(doorOpenHint);
     }
 
 
@@ -89,6 +114,16 @@ public class BladeDestroy : MonoBehaviour
         }else{
             return false;
         }
+    }
+
+    private void BeltStopMove(){
+        foreach (GameObject obj in blets){
+            obj.GetComponent<ConveyorBeltControl>().speed = 0f;
+        }
+            
+     
+
+
     }
 
     Material LoadResourceAsMaterial(string resourcePath){
