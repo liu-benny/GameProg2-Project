@@ -1312,6 +1312,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &170569547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170569544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0.76618373, b: 0, a: 1}
+  outlineWidth: 3.25
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &172018142
 GameObject:
   m_ObjectHideFlags: 0
@@ -5207,6 +5225,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &856938539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856938536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0.7812413, b: 0, a: 1}
+  outlineWidth: 2.06
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &858539157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 8fc847fdd92983f43b5183ed20e269a3, type: 3}
@@ -24451,7 +24487,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683788799}
-  m_LocalRotation: {x: -0.014587623, y: 0.9821712, z: -0.16649964, w: -0.08605149}
+  m_LocalRotation: {x: -0.014587615, y: 0.9821712, z: -0.16649963, w: -0.08605145}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -35247,6 +35283,7 @@ GameObject:
   - component: {fileID: 1868498006}
   - component: {fileID: 1868498005}
   - component: {fileID: 1868498008}
+  - component: {fileID: 1868498009}
   m_Layer: 6
   m_Name: pillow
   m_TagString: Untagged
@@ -35331,6 +35368,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 15427fb62be34b141aacac4503ec8e37, type: 3}
+--- !u!114 &1868498009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868498004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.21176472, g: 0.5058824, b: 0.7686275, a: 1}
+  outlineWidth: 3.86
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1880765715
 GameObject:
   m_ObjectHideFlags: 0
@@ -51042,6 +51097,7 @@ GameObject:
   - component: {fileID: 8203978773940635387}
   - component: {fileID: 8832037805088824386}
   - component: {fileID: 8832037805088824387}
+  - component: {fileID: 8832037805088824388}
   m_Layer: 0
   m_Name: cage
   m_TagString: Untagged
@@ -51080,6 +51136,24 @@ MonoBehaviour:
   explosion: {fileID: 5423555040060128157, guid: ea99ff057160691489e9fc65a44a0848, type: 3}
   audioSource: {fileID: 467660514}
   cageBreak: {fileID: 8300000, guid: f5c511ab2dcfe154cb40659c09873bc4, type: 3}
+--- !u!114 &8832037805088824388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8832037805088824385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.20784315, g: 0.18431373, b: 0.1764706, a: 1}
+  outlineWidth: 3.96
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &9069328031393043316
 GameObject:
   m_ObjectHideFlags: 0

@@ -7352,6 +7352,7 @@ GameObject:
   - component: {fileID: 260002128}
   - component: {fileID: 260002127}
   - component: {fileID: 260002126}
+  - component: {fileID: 260002131}
   m_Layer: 0
   m_Name: milk (2)
   m_TagString: Untagged
@@ -7452,6 +7453,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -91.58}
+--- !u!114 &260002131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260002125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.20784315, g: 0.20000002, b: 0.31764707, a: 1}
+  outlineWidth: 5.89
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &261619668
 GameObject:
   m_ObjectHideFlags: 0
@@ -8497,7 +8516,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382227921}
-  m_LocalRotation: {x: -0.013345259, y: 0.98282385, z: -0.16631186, w: -0.07886413}
+  m_LocalRotation: {x: -0.013345256, y: 0.98282385, z: -0.16631186, w: -0.07886411}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10739,6 +10758,24 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1369511928562321527, guid: 8f7b5306ab15a59408ce647f97a6245f, type: 3}
+--- !u!114 &590533859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590533853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.3921569, g: 0.45882356, b: 0.5294118, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &594022491
 GameObject:
   m_ObjectHideFlags: 0
@@ -11369,6 +11406,7 @@ GameObject:
   - component: {fileID: 641004393}
   - component: {fileID: 641004392}
   - component: {fileID: 641004391}
+  - component: {fileID: 641004396}
   m_Layer: 0
   m_Name: milk (3)
   m_TagString: Untagged
@@ -11469,6 +11507,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -91.58}
+--- !u!114 &641004396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641004390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.20784315, g: 0.20000002, b: 0.31764707, a: 1}
+  outlineWidth: 5.89
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &641040051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18964,8 +19020,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855375130}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -6.09, y: 10.4, z: 7.13}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: -6.56, y: 10.02, z: 7.35}
+  m_LocalScale: {x: 80, y: 80, z: 80}
   m_Children: []
   m_Father: {fileID: 543450653215593433}
   m_RootOrder: 57
@@ -20639,7 +20695,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.013345259, y: 0.98282385, z: -0.16631186, w: -0.07886413}
+  m_LocalRotation: {x: -0.013345255, y: 0.98282385, z: -0.16631186, w: -0.0788641}
   m_LocalPosition: {x: -30.10418, y: 3.7486393, z: -16.593275}
   m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
   m_Children: []
@@ -20789,6 +20845,7 @@ GameObject:
   - component: {fileID: 963403145}
   - component: {fileID: 963403148}
   - component: {fileID: 963403149}
+  - component: {fileID: 963403150}
   m_Layer: 6
   m_Name: knockableShelf
   m_TagString: Furniture
@@ -20893,6 +20950,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &963403150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963403144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.4901961, g: 0.37647063, b: 0.25882354, a: 1}
+  outlineWidth: 2.48
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &972897270
 GameObject:
   m_ObjectHideFlags: 0
@@ -24969,6 +25044,7 @@ GameObject:
   - component: {fileID: 1413760300}
   - component: {fileID: 1413760299}
   - component: {fileID: 1413760298}
+  - component: {fileID: 1413760301}
   m_Layer: 0
   m_Name: rack.003_Plane.020 (2)
   m_TagString: Untagged
@@ -25039,6 +25115,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
+--- !u!65 &1413760301
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413760297}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0037534006, y: 0.012308389, z: 0.0006670393}
+  m_Center: {x: 0.020727258, y: -0.006949885, z: 0.010270922}
 --- !u!1 &1427134167
 GameObject:
   m_ObjectHideFlags: 0
@@ -27001,7 +27090,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599699762}
-  m_LocalRotation: {x: -0.014777549, y: 0.97963613, z: -0.18416141, w: -0.07860833}
+  m_LocalRotation: {x: -0.014777542, y: 0.97963613, z: -0.1841614, w: -0.078608304}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -40609,13 +40698,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932164299}
-  m_LocalRotation: {x: -0.47043347, y: -0.25903952, z: -0.29151323, w: 0.7915876}
-  m_LocalPosition: {x: -5.69, y: 8.74, z: 7.07}
+  m_LocalRotation: {x: -0.5226591, y: -0.29098538, z: -0.23063266, w: 0.76743954}
+  m_LocalPosition: {x: -5.55, y: 8.56, z: 6.7}
   m_LocalScale: {x: 100, y: 39.03803, z: 100}
   m_Children: []
   m_Father: {fileID: 543450653215593433}
   m_RootOrder: 56
-  m_LocalEulerAnglesHint: {x: -63.612, y: -17.795, z: -29.343}
+  m_LocalEulerAnglesHint: {x: -69.462, y: -35.865, z: -8.164}
 --- !u!64 &1932164301
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -44423,6 +44512,7 @@ GameObject:
   - component: {fileID: 7744417748796602511}
   - component: {fileID: 5935516177679222216}
   - component: {fileID: 5331046662035554575}
+  - component: {fileID: 711889117339854453}
   m_Layer: 0
   m_Name: BezierCurve.001
   m_TagString: Untagged
@@ -44430,6 +44520,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &711889117339854453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711889117339854452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  outlineWidth: 3.95
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &769409823224161431
 GameObject:
   m_ObjectHideFlags: 0
@@ -44942,6 +45050,7 @@ GameObject:
   - component: {fileID: 7247704493003540715}
   - component: {fileID: 7247704493003540716}
   - component: {fileID: 1407071545930302533}
+  - component: {fileID: 1407071545930302534}
   m_Layer: 6
   m_Name: Cylinder.003
   m_TagString: Untagged
@@ -44965,6 +45074,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1407071545930302534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407071545930302532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  outlineWidth: 3.95
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1436560378600547138
 GameObject:
   m_ObjectHideFlags: 0
@@ -44976,6 +45103,7 @@ GameObject:
   - component: {fileID: 6021947266534603519}
   - component: {fileID: 5078313157022718162}
   - component: {fileID: 36492047518761283}
+  - component: {fileID: 1436560378600547139}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -44983,6 +45111,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1436560378600547139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436560378600547138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  outlineWidth: 3.95
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &1442450553528362335
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45599,6 +45745,7 @@ GameObject:
   - component: {fileID: 2732701192691884907}
   - component: {fileID: 4827730927810890882}
   - component: {fileID: 2138339929220400287}
+  - component: {fileID: 2302844948806329016}
   m_Layer: 0
   m_Name: Cube.002
   m_TagString: Untagged
@@ -45606,6 +45753,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2302844948806329016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302844948806329015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  outlineWidth: 3.95
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &2355982398974222698
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45975,6 +46140,7 @@ GameObject:
   - component: {fileID: 1149949637496693144}
   - component: {fileID: 3004435060198718989}
   - component: {fileID: 3004435060198718988}
+  - component: {fileID: 3004435060198718990}
   m_Layer: 6
   m_Name: milk
   m_TagString: Untagged
@@ -46012,6 +46178,24 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3116465286698040369, guid: e331a142dce2b6e489c5867fd9fa0b34, type: 3}
+--- !u!114 &3004435060198718990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3004435060198718987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.20784315, g: 0.20000002, b: 0.31764707, a: 1}
+  outlineWidth: 5.89
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &3010172807360519138
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47405,6 +47589,7 @@ GameObject:
   - component: {fileID: 1478153306295771049}
   - component: {fileID: 521518864007266217}
   - component: {fileID: 5311768532214793285}
+  - component: {fileID: 5311768532214793286}
   m_Layer: 6
   m_Name: Cylinder.002
   m_TagString: Untagged
@@ -47426,6 +47611,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8691780276856062721, guid: 6f1096c409042064fa68cc82592c84b4, type: 3}
+--- !u!114 &5311768532214793286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311768532214793284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  outlineWidth: 3.95
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &5331046662035554575
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47989,6 +48192,7 @@ GameObject:
   - component: {fileID: 2396387895030045463}
   - component: {fileID: 633415669325763981}
   - component: {fileID: 6449409830896446803}
+  - component: {fileID: 6449409830896446804}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -48010,6 +48214,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 6f1096c409042064fa68cc82592c84b4, type: 3}
+--- !u!114 &6449409830896446804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6449409830896446802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  outlineWidth: 3.95
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &6597095264430698274
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -48264,6 +48486,7 @@ GameObject:
   - component: {fileID: 6395916743381213148}
   - component: {fileID: 2395789608771692866}
   - component: {fileID: 6069022844836443549}
+  - component: {fileID: 6968651952145535287}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -48271,6 +48494,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6968651952145535287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6968651952145535286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  outlineWidth: 3.95
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &6997054476828660708
 GameObject:
   m_ObjectHideFlags: 0
@@ -49102,6 +49343,7 @@ GameObject:
   - component: {fileID: 5513128266433178762}
   - component: {fileID: 3135818771126615420}
   - component: {fileID: 2553507659801582690}
+  - component: {fileID: 8053926029733721142}
   m_Layer: 0
   m_Name: BezierCurve
   m_TagString: Untagged
@@ -49109,6 +49351,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8053926029733721142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053926029733721141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  outlineWidth: 3.95
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &8102382928324209545
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49616,6 +49876,7 @@ GameObject:
   - component: {fileID: 3716086580006243688}
   - component: {fileID: 1736629485381729089}
   - component: {fileID: 642770726056942706}
+  - component: {fileID: 8799191868605142183}
   m_Layer: 0
   m_Name: Cylinder.042
   m_TagString: Untagged
@@ -49623,6 +49884,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8799191868605142183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799191868605142182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  outlineWidth: 3.95
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &8813923735984661717
 MeshRenderer:
   m_ObjectHideFlags: 0
