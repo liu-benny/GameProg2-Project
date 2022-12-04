@@ -22,16 +22,12 @@ public class WinScene : MonoBehaviour
         
     }
 
-
-
-    private void OnTriggerEnter(Collider other) {
-        
-        
+    private void OnCollisionEnter(Collision other) {
         if(other.gameObject.name.Equals("beefyBoy") && blade.GetComponent<BladeDestroy>().checkBladeHealthIsZore() ){
             winScreen.SetActive(true);
         }
-
-    }
+        
+    } 
 
     public void PlayAgainButton(string MainMenu){
         SceneManager.LoadScene(MainMenu);
