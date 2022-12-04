@@ -5,43 +5,43 @@ using UnityEngine;
 public class BloodDamage : MonoBehaviour
 {
     MovementBB beefyBoyMovement;
-    
     CanvasGroup bloodIndicator;
-    
     bool takeBloodDamage;
+    GameObject playerUI;
+    HealthBar healthBar;
     
     // Start is called before the first frame update
     void Start()
     {
         beefyBoyMovement = GetComponent<MovementBB>();
-        
         bloodIndicator = GameObject.Find("BloodEffect").GetComponent<CanvasGroup>();
-
         takeBloodDamage = false;
+
+        playerUI = GameObject.Find("HealthBar");
+        healthBar = playerUI.GetComponent<HealthBar>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!takeBloodDamage && bloodIndicator.alpha > 0.01f) {
-            bloodIndicator.alpha -= 0.2f;
+        if (!takeBloodDamage && bloodIndicator.alpha > 0.001f) {
+            bloodIndicator.alpha -= 0.005f;
         }
     }
 
     void OnTriggerEnter(Collider other) {
-        Debug.Log("aaaaaaaaaa");
         takeBloodDamage = true;
     }
 
     void OnTriggerStay(Collider other) {
-        Debug.Log("bbbbbbbbbb");
         if (other.gameObject.layer == 7 && other.gameObject.activeInHierarchy && bloodIndicator.alpha < 0.5f) {
-            bloodIndicator.alpha += 0.2f;
+            bloodIndicator.alpha += 0.01f;
+            beefyBoyMovement.health--;
+            healthBar.SetHealth(beefyBoyMovement.health);
         }
     }
 
-    private void OnTriggerExit(Collider other) {
-        Debug.Log("cccccccccc");
+    void OnTriggerExit(Collider other) {
         takeBloodDamage = false;
     }
 }
