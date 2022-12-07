@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SpawnObjectBehavior : MonoBehaviour
 {
-    public GameObject floor;
+    public GameObject curtainCollider;
     public GameObject packagingBoxBuilding;
     
     void Start()
     {
         packagingBoxBuilding = GameObject.Find("curtains/curtainCollider");
-        floor = GameObject.Find("floorObj");
+        curtainCollider = GameObject.Find("otherCurtainCollider");
 
     }
 
@@ -23,7 +23,7 @@ public class SpawnObjectBehavior : MonoBehaviour
         if (collision.gameObject == packagingBoxBuilding) {
             Destroy(this.gameObject);
         }
-        if (collision.gameObject == floor) {
+        if (collision.gameObject == curtainCollider) {
             Destroy(this.gameObject);
         }
     }
