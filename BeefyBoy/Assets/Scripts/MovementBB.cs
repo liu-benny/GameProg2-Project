@@ -97,6 +97,7 @@ public class MovementBB : MonoBehaviour
     void KillBeefyBoy() {
         Debug.Log("Beefy boy health reached 0. Beefy boy is dead!");
         deathScreen.SetActive(true);
+        Cursor.visible = true;
         this.gameObject.SetActive(false);
         Destroy(this);
     }

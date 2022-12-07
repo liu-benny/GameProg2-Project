@@ -32,6 +32,7 @@ public class DeathUI : MonoBehaviour
     }
 
     public void DeathPopUp(){
+        Cursor.visible = true;
         this.gameObject.SetActive(true);
     }
 }
