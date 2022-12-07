@@ -9,7 +9,6 @@ public class ConveyorBeltControl : MonoBehaviour
     public string direction = ""; 
 
     public float x = 0;
-    // public float beltMaterialSpeed = 0.15f;
 
     public void OnCollisionStay(Collision other) {
 

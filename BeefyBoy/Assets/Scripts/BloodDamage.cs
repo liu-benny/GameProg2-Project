@@ -10,7 +10,6 @@ public class BloodDamage : MonoBehaviour
     GameObject playerUI;
     HealthBar healthBar;
     
-    // Start is called before the first frame update
     void Start()
     {
         beefyBoyMovement = GetComponent<MovementBB>();
@@ -21,7 +20,6 @@ public class BloodDamage : MonoBehaviour
         healthBar = playerUI.GetComponent<HealthBar>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!takeBloodDamage && bloodIndicator.alpha > 0.001f) {
