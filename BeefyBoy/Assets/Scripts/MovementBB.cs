@@ -24,6 +24,7 @@ public class MovementBB : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
     private float xInput, zInput;
+    // private bool isFloored = true;
 
     void Start()
     {
@@ -36,6 +37,7 @@ public class MovementBB : MonoBehaviour
     
     void Update()
     {
+        // Debug.Log(currentScene.name);
         xInput = Input.GetAxis("Horizontal");
         zInput = Input.GetAxis("Vertical");
         Vector3 direction = new Vector3(xInput, 0f, zInput).normalized;
@@ -74,7 +76,7 @@ public class MovementBB : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.name == "Floor" || other.gameObject.name == "curtainCollider" || other.gameObject.name == "otherCurtainCollider"){
+        if(other.gameObject.name == "Floor" || other.gameObject.name == "curtainCollider"){
             health = 0;
             KillBeefyBoy();
         }
@@ -97,7 +99,6 @@ public class MovementBB : MonoBehaviour
     void KillBeefyBoy() {
         Debug.Log("Beefy boy health reached 0. Beefy boy is dead!");
         deathScreen.SetActive(true);
-        Cursor.visible = true;
         this.gameObject.SetActive(false);
         Destroy(this);
     }

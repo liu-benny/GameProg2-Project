@@ -43,6 +43,7 @@ public class BladeDestroy : MonoBehaviour
     void Update()
     {
         GameObject exitDoor = GameObject.Find("exit-door");
+        // Debug.Log("Health: " + bladehealth);
         if (checkBladeHealthIsZore()){
             exitDoor.GetComponent<Renderer>().material = glass;
         }
@@ -97,6 +98,7 @@ public class BladeDestroy : MonoBehaviour
 
     private void DisableDoorOpenHint(){
         doorOpenHint.SetActive(false);
+        // Destroy(doorOpenHint);
     }
 
 
@@ -118,6 +120,10 @@ public class BladeDestroy : MonoBehaviour
         foreach (GameObject obj in blets){
             obj.GetComponent<ConveyorBeltControl>().speed = 0f;
         }
+            
+     
+
+
     }
 
     Material LoadResourceAsMaterial(string resourcePath){
