@@ -32,6 +32,24 @@ public class PauseMenu : MonoBehaviour
       
     }
 
+    public void RestartGame(){
+      if (SceneManager.GetActiveScene().name.Equals("Level1")) {
+                SceneManager.LoadScene("Level1");
+                Pause.SetActive(false);
+                Time.timeScale = 1f;
+            }else if (SceneManager.GetActiveScene().name.Equals("Level2")) {
+                SceneManager.LoadScene("Level2");
+                Pause.SetActive(false);
+                Time.timeScale = 1f;
+            }
+            else if (SceneManager.GetActiveScene().name.Equals("BossLevel")) {
+                SceneManager.LoadScene("BossLevel");
+                Pause.SetActive(false);
+                Time.timeScale = 1f;
+            }
+           
+    }
+
     public void TryAgain(){
       if (SceneManager.GetActiveScene().name.Equals("Level1")) {
                 SceneManager.LoadScene("Level1");
