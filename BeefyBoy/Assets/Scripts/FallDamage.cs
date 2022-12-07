@@ -36,7 +36,10 @@ public class FallDamage : MonoBehaviour
     void OnCollisionEnter(Collision other) {
         float fallDamageSpeed = velocityBeforePhysicsUpdate.y;
 
-        Debug.Log(fallDamageSpeed);      
+        Debug.Log(fallDamageSpeed);
+
+        // Debug.Log("Cake bounced yo ass");
+        
 
         if (beefyBoyMovement != null && beefyBoyMovement.health > 0) 
         {
@@ -47,9 +50,13 @@ public class FallDamage : MonoBehaviour
                     int damageMultiplier = -7;
                     beefyBoyMovement.health -= (int) (damageMultiplier * fallDamageSpeed);
                     healthBar.SetHealth(beefyBoyMovement.health);
+                    // Debug.Log("Health: " + beefyBoyMovement.health);
                     audioSource.PlayOneShot(damageClip);    
                 }  
-            }           
+            }
+              
+
+           
         }
     }
 }

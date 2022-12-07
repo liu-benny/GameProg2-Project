@@ -22,20 +22,17 @@ public class PauseMenu : MonoBehaviour
     }
 
      public void PauseGame(){
-      Cursor.visible = true;
       Time.timeScale = 0f;
       Pause.SetActive(true);
     }
 
     public void ResumeGame(){
-      Cursor.visible = false;
       Pause.SetActive(false);
       Time.timeScale = 1f;
       
     }
 
     public void RestartGame(){
-      Cursor.visible = false;
       if (SceneManager.GetActiveScene().name.Equals("Level1")) {
                 SceneManager.LoadScene("Level1");
                 Pause.SetActive(false);
@@ -50,11 +47,10 @@ public class PauseMenu : MonoBehaviour
                 Pause.SetActive(false);
                 Time.timeScale = 1f;
             }
-           
+
     }
 
     public void TryAgain(){
-      Cursor.visible = true;
       if (SceneManager.GetActiveScene().name.Equals("Level1")) {
                 SceneManager.LoadScene("Level1");
             }else if (SceneManager.GetActiveScene().name.Equals("Level2")) {
@@ -67,7 +63,6 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void QuitGame(){
-      Cursor.visible = true;
       Time.timeScale = 1f;
       SceneManager.LoadScene("MainMenu");
     }

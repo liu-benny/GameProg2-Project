@@ -26,8 +26,6 @@ public class MainMenu : MonoBehaviour
     }
 
      public void StartGame(){
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
         SceneManager.LoadScene("Level1");
     }
 
@@ -37,8 +35,7 @@ public class MainMenu : MonoBehaviour
 
      public void QuitGame(){
         Debug.Log("Game Exit");
-        UnityEditor.EditorApplication.isPlaying = false;
-        // Application.Quit();
+        Application.Quit();
     }
 
    
